@@ -1,1 +1,1 @@
-see [inifaisal.github.io/simpledashboard](inifaisal.github.io/simpledashboard)
+see [https://inifaisal.github.io/simpledashboard](https://inifaisal.github.io/simpledashboard)
