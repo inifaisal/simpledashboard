@@ -2,7 +2,7 @@ body {
 
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-style: normal;*/
+  font-style: normal;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -58,6 +58,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 1000;
+  transition: all .2s ease;
 
 }
 .sidebar-list {
@@ -90,17 +91,56 @@ body {
   background-color: rgb(70, 101, 143);
 
 }
+.sidebar-collapse .sidebar {
+  -webkit-transform: translate(-180px, 0);
+  -moz-transform: translate(-180px, 0);
+  -ms-transform: translate(-180px, 0);
+  -o-transform: translate(-180px, 0);
+  transform: translate(-180px, 0);
+}
 
 .content-wrapper {
   position: static;
   overflow: hidden;
 
-  margin-left: -200px;
-
 }
+
 .content {
   margin-top: 70px;
   margin-left: 180px;
   padding: 20px;
+  -webkit-transition: margin-left 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  -moz-transition: margin-left 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  -ms-transition: margin-left 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  -o-transition: margin-left 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  transition: margin-left 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+
+}
+
+.sidebar-collapse .content {
+
+  margin-left: 0;
+
+
+}
+
+@media (max-width: 768px) {
+
+  .sidebar {
+    margin-left: -180px;
+  }
+  .sidebar-collapse .sidebar {
+    -webkit-transform: translate(180px, 0);
+    -moz-transform: translate(180px, 0);
+    -ms-transform: translate(180px, 0);
+    -o-transform: translate(180px, 0);
+    transform: translate(180px, 0);
+  }
+  .navbar-nav {
+    padding-right: 10px;
+  }
+  .content {
+    margin-left: 0;
+  }
 
 }
